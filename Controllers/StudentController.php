@@ -25,7 +25,7 @@ class StudentController
             }
             $student = new Student(null, $request['name'], $request['age'], $request['major']);
             $result = Student::add($student);
-            var_dump($result);
+
             header('Location: ' . $_SERVER['HTTP_REFERER']);
         } catch (\Throwable $th) {
             echo $th->getMessage();
